@@ -8,7 +8,9 @@ export default Ember.Controller.extend({
                 status: "Enabled",
                 description: "description"
             });
+            console.log("about to save");
             campaign.save();
+            console.log("done saving");
         }
     }
 });

@@ -9,7 +9,7 @@ module.exports = function(environment) {
     contentSecurityPolicy: {
       'default-src': "'none'",
       'style-src': "'self' 'unsafe-inline' use.typekit.net",
-      'connect-src': "'self' blob:"
+      'connect-src': "'self' blob: http://localhost:3000"
     },
     EmberENV: {
       FEATURES: {

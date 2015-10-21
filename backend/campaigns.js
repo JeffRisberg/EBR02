@@ -36,9 +36,24 @@ var campaigns = [
 ];
 
 router.get("/", function (req, res) {
-
     res.setHeader('Content-Type', 'application/json');
-    res.send(JSON.stringify(campaigns));
+    var result = {};
+    result['campaign'] = campaigns;
+    res.send(JSON.stringify(result));
+});
+
+router.post("/", function (req, res) {
+    var name = req.body.campaign.name;
+    var status = req.body.campaign.status;
+    var description = req.body.campaign.description;
+
+    var id = campaigns.length + 1;
+    var campaign = {id: id, name: name, status: status, description: description};
+    campaigns.push(campaign);
+
+    var result = {};
+    result['campaign'] = campaign;
+    res.status(201).send(JSON.stringify(result));
 });
 
 router.get("/:campaignId", function (req, res) {
@@ -49,12 +64,9 @@ router.get("/:campaignId", function (req, res) {
             return campaign.id == campaignId;
         });
 
+    res.setHeader('Content-Type', 'application/json');
+    res.setHeader('Access-Control-Allow-Origin', '*');
     res.json(campaign);
-    //Campaign.findById(req.params.campaign_id, function (err, campaign) {
-    //    if (err)
-    //        res.send(err);
-    //    res.json(campaign);
-    //});
 });
 
 /*
