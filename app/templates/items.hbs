@@ -1,0 +1,12 @@
+<div>
+    Type a new task, press enter:<br/>
+    {{input-task action='createTask'}}
+</div>
+<ul>
+    {{#each model as |item|}}
+        <li>
+            <input type="checkbox" checked={{item.isDone}} {{action 'toggleIsDone' item on="change"}}>
+            <span>{{item.task}}</span>
+        </li>
+    {{/each}}
+</ul>
