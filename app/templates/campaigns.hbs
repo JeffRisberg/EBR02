@@ -2,12 +2,21 @@
     Type a new campaign, press enter:<br/>
     {{input-task action='createCampaign'}}
 </div>
-<ul>
+<table class="table">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Status</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
     {{#each model as |campaign|}}
-        <li>
-            <span>{{campaign.name}}</span>
-            <span>{{campaign.status}}</span>
-            <span>{{campaign.description}}</span>
-        </li>
+        <tr class="campaign">
+            <td>{{campaign.name}}</td>
+            <td>{{campaign.status}}</td>
+            <td>{{campaign.description}}</td>
+        </tr>
     {{/each}}
-</ul>
+    </tbody>
+</table>

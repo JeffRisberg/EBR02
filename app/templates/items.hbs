@@ -2,11 +2,23 @@
     Type a new task, press enter:<br/>
     {{input-task action='createTask'}}
 </div>
-<ul>
+<table class="table" style="width: 400px">
+    <thead>
+    <tr>
+        <th>Done</th>
+        <th>Task</th>
+    </tr>
+    </thead>
+    <tbody>
     {{#each model as |item|}}
-        <li>
-            <input type="checkbox" checked={{item.isDone}} {{action 'toggleIsDone' item on="change"}}>
-            <span>{{item.task}}</span>
-        </li>
+        <tr>
+            <td>
+                <input type="checkbox" checked={{item.isDone}} {{action 'toggleIsDone' item on="change"}}>
+            </td>
+            <td>
+                {{item.task}}
+            </td>
+        </tr>
     {{/each}}
-</ul>
+    </tbody>
+</table>
