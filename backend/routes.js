@@ -6,7 +6,9 @@ module.exports = function (app) {
     // handle things like api calls
     // authentication routes
 
-    var campaign = require('./campaigns');
+    var campaigns = require('./campaigns');
+    var tasks = require('./tasks');
 
-    app.use("/campaigns", campaign);
+    app.use("/campaigns", campaigns);
+    app.use("/tasks", tasks);
 };

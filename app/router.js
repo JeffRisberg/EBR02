@@ -6,8 +6,9 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('items', {});
+  this.route('tasks', {});
   this.route('campaigns', {});
+  this.route('users', {});
 });
 
 export default Router;

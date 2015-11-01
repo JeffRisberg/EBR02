@@ -1,7 +1,7 @@
 <div>
     <span class="glyphicon glyphicon-tasks" aria-hidden="true"></span>
     Type a new task, press enter:<br/>
-    {{input-task action='createTask'}}
+    {{input-name action='createTask'}}
 </div>
 <table class="table" style="width: 400px">
     <thead>
@@ -11,13 +11,13 @@
     </tr>
     </thead>
     <tbody>
-    {{#each model as |item|}}
+    {{#each model as |task|}}
         <tr>
             <td>
-                <input type="checkbox" checked={{item.isDone}} {{action 'toggleIsDone' item on="change"}}>
+                <input type="checkbox" checked={{task.isDone}} {{action 'toggleIsDone' task on="change"}}>
             </td>
             <td>
-                {{item.task}}
+                {{task.name}}
             </td>
         </tr>
     {{/each}}
