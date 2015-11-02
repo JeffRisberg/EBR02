@@ -26,6 +26,8 @@ if (!Array.prototype.find) {
 }
 
 var tasks = [
+    {id: 1, name: "Walk the dog", idDone: false},
+    {id: 2, name: "Wash dishes", idDone: false}
 ];
 
 router.get("/", function (req, res) {

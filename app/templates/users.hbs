@@ -3,12 +3,16 @@
 
     <table class="table" style="width: 500px">
         <tr>
+            <th>&nbsp;</th>
             <th>First Name</th>
             <th>Last Name</th>
             <th style="text-align: right">Score</th>
         </tr>
-        {{#each model as |user|}}
+        {{#each model as |user index|}}
             <tr>
+                <td>
+                    {{index}}
+                </td>
                 <td>
                     {{user.firstName}}
                 </td>

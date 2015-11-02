@@ -26,13 +26,41 @@ if (!Array.prototype.find) {
 }
 
 var campaigns = [
-    {id: 1, name: "Fall 2015 Promo", status: "Active", description: "Fall 2015 Promo Desc"},
-    {id: 2, name: "Back to School", status: "Active", description: "Back to School 2015 Desc"},
-    {id: 3, name: "Thanksgiving", status: "Pending", description: "Thanksgiving 2015 Desc"},
-    {id: 4, name: "Holiday 2015", status: "Pending", description: "Holiday 2015 Desc"},
-    {id: 5, name: "End of Year 2015", status: "Pending", description: "End of Year 2015 Desc"},
-    {id: 6, name: "Spring 2016", status: "Pending", description: "Spring 2016 Desc"},
-    {id: 7, name: "Graduation 2016", status: "Pending", description: "Grad 2016 Promo Desc"}
+    {
+        id: 1, name: "Fall 2015 Promo", status: "Active",
+        description: "Fall 2015 Promo Desc",
+        publisher: 'Google', keywords: "fall, clothing"
+    },
+    {
+        id: 2, name: "Back to School", status: "Active",
+        description: "Back to School 2015 Desc",
+        publisher: 'Google', keywords: "back-to-school, clothing, backpacks"
+    },
+    {
+        id: 3, name: "Thanksgiving", status: "Pending",
+        description: "Thanksgiving 2015 Desc",
+        publisher: 'Bing', keywords: "turkey, thanksgiving"
+    },
+    {
+        id: 4, name: "Holiday 2015", status: "Pending",
+        description: "Holiday 2015 Desc",
+        publisher: 'Yahoo', keywords: "thanksgiving, halloween, christmas"
+    },
+    {
+        id: 5, name: "End of Year 2015", status: "Pending",
+        description: "End of Year 2015 Desc",
+        publisher: 'Bing', keywords: "christmas, snow"
+    },
+    {
+        id: 6, name: "Spring 2016", status: "Pending",
+        description: "Spring 2016 Desc",
+        publisher: 'Google', keywords: "spring, garden"
+    },
+    {
+        id: 7, name: "Graduation 2016", status: "Pending",
+        description: "Grad 2016 Promo Desc",
+        publisher: 'Google', keywords: "diploma"
+    }
 ];
 
 router.get("/", function (req, res) {
