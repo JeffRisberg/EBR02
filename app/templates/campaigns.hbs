@@ -1,8 +1,11 @@
 <div>
-    <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
-    Type a new campaign, press enter:<br/>
-    {{input-name action='createCampaign'}}
+    Name: {{input name=name}}
+    &nbsp;&nbsp;&nbsp;
+    Description: {{input name=description}}
+    <br/>
+    <button {{action 'createCampaign'}}>Create</button>
 </div>
+
 <table class="table">
     <thead>
     <tr>
