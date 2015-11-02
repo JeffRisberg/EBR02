@@ -1,10 +1,10 @@
-<div>
-    Name: {{input name=name}}
+<form {{action "createCampaign" on="submit"}}>
+    Name: {{input value=name}}
     &nbsp;&nbsp;&nbsp;
-    Description: {{input name=description}}
+    Description: {{input value=description}}
     <br/>
-    <button {{action 'createCampaign'}}>Create</button>
-</div>
+    <button type="submit" class="btn btn-default">Create</button>
+</form>
 
 <table class="table">
     <thead>
